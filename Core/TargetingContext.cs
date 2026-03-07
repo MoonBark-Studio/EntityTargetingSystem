@@ -1,0 +1,20 @@
+namespace EntityTargetingSystem;
+
+using Friflo.Engine.ECS;
+using System.Numerics;
+
+/// <summary>
+/// Context for targeting validation.
+/// </summary>
+/// <remarks>
+/// This struct provides all the information needed to validate a targeting request.
+/// </remarks>
+public readonly record struct TargetingContext(
+    Entity Caster,
+    Entity? Target,
+    Vector2? TargetPosition,
+    string AbilityId,
+    float Range,
+    bool RequiresLineOfSight
+);
+
