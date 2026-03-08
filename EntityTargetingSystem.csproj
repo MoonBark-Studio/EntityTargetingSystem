@@ -3,10 +3,15 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>EntityTargetingSystem</RootNamespace>
+    <RootNamespace>MoonBark.EntityTargetingSystem</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Friflo.Engine.ECS" Version="3.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Exclude test files from the main plugin build -->
+    <Compile Remove="Tests/**/*.cs" />
   </ItemGroup>
 </Project>

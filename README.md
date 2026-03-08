@@ -48,12 +48,28 @@ The `BaseTargetingValidator` class provides a convenient base implementation wit
 ```
 EntityTargetingSystem/
 ├── Core/
-│   ├── ITargetingValidator.cs       # Targeting validation interface
-│   ├── TargetingResult.cs          # Targeting result with details
-│   ├── TargetingContext.cs         # Context for targeting decisions
-│   └── BaseTargetingValidator.cs   # Base implementation with common logic
-└── EntityTargetingSystem.csproj    # Project file
+│   ├── ITargetingValidator.cs        # Targeting validation interface
+│   ├── TargetingResult.cs            # Targeting result with details
+│   ├── TargetingContext.cs           # Context for targeting decisions
+│   ├── BaseTargetingValidator.cs     # Base implementation with common logic
+│   └── AbilityTargetingComponent.cs  # Shared ability targeting rules
+├── Tests/
+│   ├── EntityTargetingSystem.Tests.csproj
+│   └── AbilityTargetingComponentTests.cs
+├── docs/
+│   └── migration.md
+└── EntityTargetingSystem.csproj      # Project file
 ```
+
+## Migration Status
+
+`EntityTargetingSystem` now owns the shared targeting contracts extracted for reuse, including `ITargetingValidator`, `TargetingResult`, `TargetingFailureKind`, and `AbilityTargetingComponent`.
+
+## Test Coverage
+
+Local plugin tests live under `Tests/` and validate the extracted targeting rules directly.
+
+Additional migration notes live in `docs/migration.md`.
 
 ## Dependencies
 
@@ -203,7 +219,7 @@ The `TargetingFailureKind` enum categorizes targeting failures:
 ## Integration with Other Plugins
 
 This plugin integrates with:
-- **AbilitySystem** - Provides ability definitions for targeting rules
+- **Abilities** - Provides ability definitions for targeting rules
 - **AbilityExecution** - Uses targeting validation in ability execution pipeline
 
 ## Common Targeting Scenarios
@@ -239,4 +255,4 @@ Potential additions:
 
 ## License
 
-[Your License Here]
+License not yet specified.

@@ -1,4 +1,4 @@
-namespace EntityTargetingSystem;
+namespace MoonBark.EntityTargetingSystem;
 
 using Friflo.Engine.ECS;
 using System.Numerics;
