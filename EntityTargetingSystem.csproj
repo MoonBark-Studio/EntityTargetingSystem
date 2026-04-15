@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\MoonBark.Framework\MoonBark.Framework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!-- Exclude test files from the main plugin build -->
     <Compile Remove="Tests/**/*.cs" />
   </ItemGroup>

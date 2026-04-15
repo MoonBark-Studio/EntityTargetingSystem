@@ -1,4 +1,4 @@
-namespace MoonBark.EntityTargetingSystem;
+namespace MoonBark.Framework.Core.Targeting;
 
 using Friflo.Engine.ECS;
 using System.Numerics;
@@ -180,59 +180,3 @@ public abstract class BaseTargetingValidator : ITargetingValidator
         return TargetingResult.Success();
     }
 }
-
-/// <summary>
-/// Defines targeting rules for an ability.
-/// </summary>
-public struct AbilityTargetingRules
-{
-    /// <summary>
-    /// Whether the ability can target hostile entities.
-    /// </summary>
-    public bool CanTargetHostile { get; set; }
-
-    /// <summary>
-    /// Whether the ability can target neutral entities.
-    /// </summary>
-    public bool CanTargetNeutral { get; set; }
-
-    /// <summary>
-    /// Whether the ability can target friendly entities.
-    /// </summary>
-    public bool CanTargetFriendly { get; set; }
-
-    /// <summary>
-    /// Whether the ability can target entities of the same faction.
-    /// </summary>
-    public bool CanTargetSameFaction { get; set; }
-
-    /// <summary>
-    /// Maximum range for the ability.
-    /// </summary>
-    public float Range { get; set; }
-
-    /// <summary>
-    /// Whether the ability requires line of sight.
-    /// </summary>
-    public bool RequiresLineOfSight { get; set; }
-
-    /// <summary>
-    /// Creates new targeting rules.
-    /// </summary>
-    public AbilityTargetingRules(
-        bool canTargetHostile,
-        bool canTargetNeutral,
-        bool canTargetFriendly,
-        bool canTargetSameFaction,
-        float range,
-        bool requiresLineOfSight)
-    {
-        CanTargetHostile = canTargetHostile;
-        CanTargetNeutral = canTargetNeutral;
-        CanTargetFriendly = canTargetFriendly;
-        CanTargetSameFaction = canTargetSameFaction;
-        Range = range;
-        RequiresLineOfSight = requiresLineOfSight;
-    }
-}
-

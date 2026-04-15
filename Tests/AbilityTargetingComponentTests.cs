@@ -1,5 +1,6 @@
 namespace EntityTargetingSystem.Tests;
 
+using MoonBark.Framework.Core.Targeting;
 using Xunit;
 
 public sealed class AbilityTargetingComponentTests
@@ -29,10 +30,10 @@ public sealed class AbilityTargetingComponentTests
     [Fact]
     public void Failure_CapturesReasonAndKind()
     {
-        TargetingResult result = TargetingResult.Failure("blocked", TargetingFailureKind.LineOfSightBlocked);
+        TargetingResult result = TargetingResult.Failure("blocked", TargetingFailureKind.NoLineOfSight);
 
         Assert.False(result.CanTarget);
         Assert.Equal("blocked", result.FailureReason);
-        Assert.Equal(TargetingFailureKind.LineOfSightBlocked, result.FailureKind);
+        Assert.Equal(TargetingFailureKind.NoLineOfSight, result.FailureKind);
     }
 }
