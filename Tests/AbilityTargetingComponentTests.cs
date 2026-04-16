@@ -1,6 +1,6 @@
 namespace EntityTargetingSystem.Tests;
 
-using MoonBark.Framework.Core.Targeting;
+using MoonBark.Framework.Targeting;
 using Xunit;
 
 public sealed class AbilityTargetingComponentTests
