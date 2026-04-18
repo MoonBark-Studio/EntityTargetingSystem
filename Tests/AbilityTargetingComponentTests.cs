@@ -1,4 +1,4 @@
-namespace EntityTargetingSystem.Tests;
+namespace MoonBark.EntityTargetingSystem.Tests;
 
 using MoonBark.Framework.Targeting;
 using Xunit;

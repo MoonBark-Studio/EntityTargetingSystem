@@ -1,55 +1,36 @@
 # EntityTargetingSystem — Health
 
-## Health Score: 60/100 ⚠️
-**Status:** ⚠️ **WARNING** (Anti-pattern audit complete 2026-04-14)
+**Module:** `internal.EntityTargetingSystem`
 
----
+## Overview
+<!-- Current status summary -->
 
-## Anti-Pattern Audit Findings
+## Metrics
+- C# Files: 6
+- Total Lines: ~399
+- Issues Found: 0
+- Changed Files: 0
+- Last Audit: 2026-04-18 01:16
 
-### ⚠️ MEDIUM Severity — 2 Issues
+## Issues Found
+- None detected
 
-| Severity | File | Line | Issue |
-|----------|------|------|-------|
-| MEDIUM | `Core/ITargetingValidator.cs` | 14 | INTERFACE BLOAT — single implementation `BaseTargetingValidator`, not a test mock |
-| LOW | `Core/BaseTargetingValidator.cs` | 124-181 | EMPTY IMPLEMENTATION — virtual methods return `Success` without actual logic |
+## ECS Boundary Compliance (v2)
+- ❌ ECS violations: 4
+  - `internal/EntityTargetingSystem/Core/AbilityTargetingComponent.cs`: ECS type/Friflo outside ECS/ subdirectory
+  - `internal/EntityTargetingSystem/Core/BaseTargetingValidator.cs`: ECS type/Friflo outside ECS/ subdirectory
+  - `internal/EntityTargetingSystem/Core/ITargetingValidator.cs`: ECS type/Friflo outside ECS/ subdirectory
+  - `internal/EntityTargetingSystem/Core/TargetingContext.cs`: ECS type/Friflo outside ECS/ subdirectory
+- ❌ 4 files with ECS types outside ECS/ subdirectory
 
-### Priority Fixes
-1. Justify `ITargetingValidator` interface or inline into `BaseTargetingValidator`
-2. Implement stub virtual methods or remove them
+## Framework Contracts (v2)
+- ✅ No framework contract gaps detected
 
----
+## License Compliance (v2)
+- ✅ License compliant
 
-## Build & Tests
+## Critical Debt
+<!-- Known problems requiring attention -->
 
-| Check | Status | Notes |
-|-------|--------|-------|
-| Build | ✅ PASS | Clean |
-| Tests | ✅ 1 file | AbilityTargetingComponentTests.cs |
-
----
-
-## Known Issues
-
-| Severity | Issue | Status |
-|----------|-------|--------|
-| MEDIUM | Interface bloat (ITargetingValidator) | Unresolved |
-| LOW | Empty virtual method implementations | Unresolved |
-
----
-
-## Tech Debt
-
-| Item | Priority | Status |
-|------|----------|--------|
-| Resolve interface bloat | P1 | Pending |
-| Implement empty stubs or remove | P2 | Pending |
-
----
-
-## Structure
-
-Core/ — ITargetingValidator, range/LOS/faction checks, failure reasons
-Godot/ — Godot bridge
-Tests/ — 1 test file
-addons/ — Godot addon distribution
+## Last Audit
+*Audited by golden_trio_cron v2 — 2026-04-18 01:16*

@@ -1,45 +1,27 @@
 # EntityTargetingSystem — Roadmap
-Updated: 2026-04-14
 
-## Overview
-ECS targeting validation system providing ITargetingValidator, TargetingResult, TargetingFailureKind, and AbilityTargetingComponent for ability systems.
+**Module:** `internal.EntityTargetingSystem`
 
-## Development Phases
+## Action Items from Latest Audit
+- [ ] ECS refactor: move 4 files with ECS types into cs/ECS/ subdirectory
+  - `internal/EntityTargetingSystem/Core/AbilityTargetingComponent.cs`
+  - `internal/EntityTargetingSystem/Core/BaseTargetingValidator.cs`
+  - `internal/EntityTargetingSystem/Core/ITargetingValidator.cs`
 
-### Phase 1: Integration (Current)
-- [ ] Fix build issues in EntityTargetingSystem project.
-- [ ] Integrate targeting validation with Abilities plugin.
-- [ ] Verify ITargetingValidator contract with AbilityExecution pipeline.
-- [ ] Add unit tests for core validation logic.
+## TODO
+<!-- Action items in priority order -->
 
-### Phase 2: Core Features
-- [ ] Implement line-of-sight checking in BaseTargetingValidator.
-- [ ] Add area-of-effect (AoE) targeting validation.
-- [ ] Support multi-target validation for abilities.
-- [ ] Add targeting priority/filter system.
+## Future Work
+<!-- Ideas, nice-to-haves -->
 
-### Phase 3: Performance
-- [ ] Add batch processing for mass targeting validation.
-- [ ] Implement targeting result caching.
-- [ ] Profile and optimize hot paths.
+## Changelog
+### 2026-04-18
+- Audit run — 0 total issues (0 changed files)
+- ECS violations: 4
+- Framework bridge gaps: 0
 
-## Key Deliverables
+### v0.0.1
+- Initial trio created by golden_trio_cron v2
 
-| Feature | Status | Priority |
-|---------|--------|----------|
-| ITargetingValidator interface | Done | P0 |
-| TargetingResult with failure details | Done | P0 |
-| TargetingFailureKind enum | Done | P0 |
-| AbilityTargetingComponent | Done | P0 |
-| BaseTargetingValidator | Done | P1 |
-| Line-of-sight validation | Planned | P2 |
-| AoE targeting | Planned | P2 |
-| Batch processing | Planned | P3 |
-| Targeting cache | Planned | P3 |
-
-## Dependencies
-
-| Plugin | Purpose |
-|--------|---------|
-| Abilities | Ability definitions and targeting rule lookup |
-| MoonBark.Framework | Shared ECS contracts and constants |
+### 2026-04-18
+- No auto-fixable issues found.
