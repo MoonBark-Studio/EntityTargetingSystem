@@ -1,0 +1,21 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Force LF for C# source files
+*.cs text eol=lf
+
+# Force LF for project files
+*.csproj text eol=lf
+*.sln text eol=lf
+
+# Force LF for config/markdown
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Binary files
+*.dll binary
+*.pdb binary
+*.png binary
+*.jpg binary
