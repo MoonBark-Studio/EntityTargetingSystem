@@ -1,11 +1,11 @@
-namespace MoonBark.EntityTargetingSystem;
+namespace MoonBark.EntityTargetingSystem.Core;
 
 using Friflo.Engine.ECS;
 
 /// <summary>
 /// Defines which faction or relationship dispositions an ability can target.
 /// </summary>
-public struct AbilityTargetingComponent : IComponent
+public struct AbilityTargetingComponent : IComponent, IEquatable<AbilityTargetingComponent>
 {
     /// <summary>
     /// Whether the ability can target hostile entities.
@@ -98,4 +98,15 @@ public struct AbilityTargetingComponent : IComponent
 
         return false;
     }
+
+    public bool Equals(AbilityTargetingComponent other) =>
+        CanTargetHostile == other.CanTargetHostile &&
+        CanTargetNeutral == other.CanTargetNeutral &&
+        CanTargetFriendly == other.CanTargetFriendly &&
+        CanTargetSameFaction == other.CanTargetSameFaction;
+
+    public override bool Equals(object? obj) => obj is AbilityTargetingComponent other && Equals(other);
+    public override int GetHashCode() => HashCode.Combine(CanTargetHostile, CanTargetNeutral, CanTargetFriendly, CanTargetSameFaction);
+    public static bool operator ==(AbilityTargetingComponent left, AbilityTargetingComponent right) => left.Equals(right);
+    public static bool operator !=(AbilityTargetingComponent left, AbilityTargetingComponent right) => !left.Equals(right);
 }

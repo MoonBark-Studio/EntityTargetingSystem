@@ -1,4 +1,4 @@
-namespace MoonBark.EntityTargetingSystem;
+namespace MoonBark.EntityTargetingSystem.Core;
 
 using Friflo.Engine.ECS;
 using System.Numerics;
@@ -16,5 +16,17 @@ public readonly record struct TargetingContext(
     string AbilityId,
     float Range,
     bool RequiresLineOfSight
-);
+) : IEquatable<TargetingContext>
+{
+    public bool Equals(TargetingContext other) =>
+        Caster == other.Caster &&
+        Target == other.Target &&
+        TargetPosition == other.TargetPosition &&
+        AbilityId == other.AbilityId &&
+        Range == other.Range &&
+        RequiresLineOfSight == other.RequiresLineOfSight;
+
+    public static bool operator ==(TargetingContext left, TargetingContext right) => left.Equals(right);
+    public static bool operator !=(TargetingContext left, TargetingContext right) => !left.Equals(right);
+}
 
