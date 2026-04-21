@@ -22,3 +22,6 @@ obj/
 *.cache
 *.tmp
 .DS_Store
+
+# Godot artifacts (added by workspace audit)
+.git/
