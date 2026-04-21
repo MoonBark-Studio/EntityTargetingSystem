@@ -1,36 +1,20 @@
-# EntityTargetingSystem — Health
+# EntityTargetingSystem — EntityTargetingSystem
 
-**Module:** `internal.EntityTargetingSystem`
+## Status: Active
 
-## Overview
-<!-- Current status summary -->
+## Last Audited: 2026-04-21
+
+## Discovered Issues
+(none yet)
 
 ## Metrics
-- C# Files: 6
-- Total Lines: ~399
-- Issues Found: 0
-- Changed Files: 0
-- Last Audit: 2026-04-18 01:16
+- **Lines of C# production code**: 414 (from `cloc --include-lang=C# --quiet Core/ src/`)
+- **Test coverage**: unknown
+- **.csproj count**: 2
+- **Last commit**: 8b05c14 — Auto-sync plugins and internals (2026-04-21 11:19:15 -0400)
 
-## Issues Found
-- None detected
+## Architecture
+Brief description of the architecture.
 
-## ECS Boundary Compliance (v2)
-- ❌ ECS violations: 4
-  - `internal/EntityTargetingSystem/Core/AbilityTargetingComponent.cs`: ECS type/Friflo outside ECS/ subdirectory
-  - `internal/EntityTargetingSystem/Core/BaseTargetingValidator.cs`: ECS type/Friflo outside ECS/ subdirectory
-  - `internal/EntityTargetingSystem/Core/ITargetingValidator.cs`: ECS type/Friflo outside ECS/ subdirectory
-  - `internal/EntityTargetingSystem/Core/TargetingContext.cs`: ECS type/Friflo outside ECS/ subdirectory
-- ❌ 4 files with ECS types outside ECS/ subdirectory
-
-## Framework Contracts (v2)
-- ✅ No framework contract gaps detected
-
-## License Compliance (v2)
-- ✅ License compliant
-
-## Critical Debt
-<!-- Known problems requiring attention -->
-
-## Last Audit
-*Audited by golden_trio_cron v2 — 2026-04-18 01:16*
+## Dependencies
+- (none)
