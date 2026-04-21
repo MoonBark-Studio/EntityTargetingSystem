@@ -1,7 +1,20 @@
-﻿bin/
+# Godot artifacts
+.import/
+.kilo/
+.mono/
+addons/
+node_modules/
+*.import
+*.tscn.cache
+*.tres.cache
+export_presets.cfg
+*.log
+
+bin/
 obj/
 .vs/
 .idea/
+.vscode/
 *.user
 *.suo
 *.cache
