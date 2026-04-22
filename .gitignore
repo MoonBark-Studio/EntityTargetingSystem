@@ -24,5 +24,9 @@ obj/
 .DS_Store
 
 # Godot artifacts (added by workspace audit)
-.git/
-.vscode/
+
+# Missing .NET / C# patterns (workspace audit)
+*.csproj
+*.sln
+*.pck
+*.res
