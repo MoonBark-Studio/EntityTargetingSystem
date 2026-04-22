@@ -25,3 +25,4 @@ obj/
 
 # Godot artifacts (added by workspace audit)
 .git/
+.vscode/
