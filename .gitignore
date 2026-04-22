@@ -30,8 +30,6 @@ obj/
 *.exe
 
 # .NET / NuGet
-*.csproj
-*.sln
 *.pck
 *.res
 
@@ -50,3 +48,20 @@ obj/
 # Other
 *.cache
 *.tmp
+
+# .NET/NuGet
+artifacts/
+project.lock.json
+project.fragment.lock.json
+*.nupkg
+*.snupkg
+
+# OS
+Thumbs.db
+
+# Temp
+tmp/
+temp/
+.tmp/
+.temp/
+mono_crash.*
