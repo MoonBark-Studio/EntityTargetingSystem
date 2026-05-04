@@ -61,3 +61,20 @@ Register the module with your game’s service registry:
 var module = new EntityTargetingModule(myCustomValidator);
 module.ConfigureServices(services);
 ```
+
+## Key Types
+## Key Types (12 files, ~482 lines)
+AbilityTargetingComponent, AbilityTargetingComponentTests, BaseTargetingValidator, EntityTargetingModule, ITargetingValidator, allows, provides, struct, to
+## Namespaces
+- `MoonBark.EntityTargeting`
+- `MoonBark.EntityTargetingSystem.Core`
+- `MoonBark.EntityTargetingSystem.Tests`
+- `MoonBark.Framework.Targeting`
+## ECS Architecture (v2)
+- ECS subdirectories: none
+- ECS files outside subdirectories: 4
+- Flat structure: Core/, ECS/, Godot/ (cs/ prefix not required)
+## Status
+- ✅ Audited: 2026-04-30
+- Changed files this run: 0
+- File count: 12 C# files (~482 lines)
