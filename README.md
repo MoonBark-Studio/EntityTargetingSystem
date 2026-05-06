@@ -75,6 +75,6 @@ AbilityTargetingComponent, AbilityTargetingComponentTests, BaseTargetingValidato
 - ECS files outside subdirectories: 4
 - Flat structure: Core/, ECS/, Godot/ (cs/ prefix not required)
 ## Status
-- ✅ Audited: 2026-04-30
-- Changed files this run: 0
+- ✅ Audited: 2026-05-05
+- Changed files this run: 12
 - File count: 12 C# files (~482 lines)

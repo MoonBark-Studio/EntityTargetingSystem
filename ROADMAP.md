@@ -28,6 +28,16 @@
 <!-- Action items in priority order -->
 
 ## Changelog
+### 2026-05-05
+- Audit run — 0 total issues (12 changed files)
+- ECS violations: 4
+- Framework bridge gaps: 0
+
+<!-- previous entries preserved -->
+## Future Work
+<!-- Action items in priority order -->
+
+## Changelog
 ### 2026-04-30
 - Audit run — 0 total issues (0 changed files)
 - ECS violations: 4
